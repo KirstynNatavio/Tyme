@@ -1,10 +1,10 @@
 # Tyme
 
-#Installing PostgreSQL Server
+# Installing PostgreSQL Server
 
 Postgres is a widely used and open source relational database. The applications we are developing in this program make use of postgres, so it is important that we make sure it is installed.
 
-#Installing on a Mac (with Homebrew)
+# Installing on a Mac (with Homebrew)
 
 The easiest way to install postgres on the Mac is using Homebrew with the following commands:
 
@@ -29,14 +29,14 @@ To restart the server run:
 
 brew services restart postgresql
 
-#Installing on Ubuntu 16.04
+# Installing on Ubuntu 16.04
 
 On Ubuntu 16.04 you can install postgres with the following commands:
 
 $ sudo apt-get update
 $ sudo apt-get install -y postgresql-9.5 postgresql-server-dev-9.5
 
-#Create your DB user
+# Create your DB user
 
 On Ubuntu, you will have to make a postgresql user that matches your Ubuntu username.
 
@@ -47,18 +47,18 @@ createuser -P -s -e UBUNTU_USERNAME
 exit
 After this one time step, you wont need the sudo commands to create more databases and database users.
 
-#Creating Databases for my projects
+# Creating Databases for my projects
 
 The postgres server runs in the background and can serve multiple databases for your different projects. Anytime you start a new project, the first thing you'll want to do is setup a database. You can use the following commands to create users and databases using postgres' command line utilities createuser and createdb.
 
-#createuser
+# createuser
 
 While you don't need a separate user for each project, it is a good idea to create separate users. You can do that as follows:
 
 $ createuser -P -s -e db_username
 This command creates a new postgres user called db_username with super privileges and prompts for a password. You can find out about more options using the man createuser command.
 
-#createdb
+# createdb
 
 Each project will need a separate database. You can create the database as follows:
 
@@ -68,7 +68,7 @@ You should change MYAPPNAME to your project name
 It is good practice to add _development or _production so that we know if the database contains dev data or customer data.
 You will need the database name, username, and password to connect your apps to the database.
 
-#Additional Resources
+# Additional Resources
 
 Postgres Guide
 How to install and use Postgresql on Ubuntu
